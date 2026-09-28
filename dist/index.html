@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nasrullah Hafiz (NSR.) — Professional Graphic Designer, Printing Expert & Typography Specialist. Specializing in luxury brand identities, packaging dielines, CMYK prepress calibration, and custom Bengali & Latin typography." />
+  <meta name="keywords" content="Nasrullah Hafiz, NSR, Graphic Designer, Printing Expert, Typography Specialist, Bornomala, Bangla Font Design, Packaging Dieline, CMYK Color Separation, Brand Identity" />
+  <meta name="author" content="Nasrullah Hafiz" />
+  <meta name="theme-color" content="#080808" />
+
+  <title>Nasrullah Hafiz (NSR.) | Graphic Designer, Printing Expert & Typography Specialist</title>
+
+  <!-- Google Fonts: Hind Siliguri (Bengali), Plus Jakarta Sans, Space Grotesk, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=24" />
+</head>
+<body>
+
+  <!-- Custom Interactive Mouse Pointer & Glowing Follower Ring -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       Features: Expandable NSR. -> NASRULLAH HAFIZ logo, About, Services, Work, Print Calculator, Language Toggle & Theme Panel
+       ========================================================================== -->
+  <header class="site-header" id="header">
+    <nav class="navbar" aria-label="Main Navigation">
+      
+      <!-- Interactive Expandable Brand Logo (NSR. on default, NASRULLAH HAFIZ on hover) -->
+      <div class="brand-expand-wrapper">
+        <a href="#hero" class="brand-pill-btn" id="brand-pill" aria-label="Nasrullah Hafiz Portfolio">
+          <span class="name-short">NSR.</span>
+          <span class="name-full">
+            <span class="name-full-text">NASRULLAH HAFIZ</span>
+            <span class="brand-target-icon">
+              <span class="brand-target-point"></span>
+            </span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Navigation Menu Items (About, Services, Work) -->
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+        <li class="nav-item"><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+        <li class="nav-item"><a href="#portfolio" class="nav-link" data-i18n="nav.work">Work</a></li>
+        <li class="nav-item nav-item-mobile-cta">
+          <a href="#footer" class="btn-mobile-nav-cta">
+            <span data-i18n="nav.talk">Let's Talk</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Nav Actions: Language Toggle + Theme Toggle + Let's Talk CTA + Mobile Hamburger -->
+      <div class="nav-actions">
+        <!-- 1-Click Bilingual Language Toggle (English <-> বাংলা) -->
+        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle Language" title="English / বাংলা" type="button">
+          <span id="lang-indicator">বাং</span>
+        </button>
+
+        <a href="#footer" class="btn-header-cta">
+          <span data-i18n="nav.talk">Let's Talk</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button (Visible on mobile screens) -->
+        <button id="mobile-menu-btn" class="mobile-menu-toggle-btn" aria-label="Toggle Navigation Menu" type="button">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (Delight Layout: Zoomed, Right-Aligned Photo, Constrained Left Column)
+         ========================================================================== -->
+    <section class="hero-section" id="hero" style="padding-top: 1rem; padding-bottom: 3.5rem;">
+      <div class="hero-wrapper-outer" style="max-width: 1560px; width: 100%; margin: 0 auto; padding: 0 1.25rem;">
+        
+        <div class="hero-delight-container hero-fullbg-container">
+          <!-- Full Background Still Master Photograph (2nd photo with moodboard & studio, ultra-wide) -->
+          <div class="hero-full-bg-layer" aria-hidden="true">
+            <img src="assets/nasrullah-hero-cinematic-ultra.jpg" alt="Nasrullah Hafiz — Studio Workstation & Typography Board" class="hero-full-bg-image" />
+            <div class="hero-full-bg-overlay"></div>
+          </div>
+
+          <!-- Main Hero Stage: Left text column over cinematic dark overlay -->
+          <div class="hero-stage hero-fullbg-stage">
+            <div class="hero-left-column">
+              
+              <!-- Dual-Avatar Trust Badge -->
+              <div class="delight-trust-badge">
+                <div class="trust-avatar-stack">
+                  <img src="assets/client-1.jpg" alt="Client Testimonial" class="trust-avatar-circle" />
+                  <img src="assets/client-2.jpg" alt="Client Review" class="trust-avatar-circle" />
+                </div>
+                <div class="trust-text-block">
+                  <span class="trust-headline" data-i18n="hero.trust_headline">Trusted by startups & businesses worldwide</span>
+                  <span class="trust-rating-stars">
+                    <span class="stars-gold">★★★★★</span>
+                    <span data-i18n="hero.trust_rating">Rated <strong>5.0/5</strong> on client satisfaction</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Main Headline (Matching Delight Bold Typography) -->
+              <h1 class="hero-headline-delight">
+                <span data-i18n="hero.title_line1">Flawless Design,</span><br />
+                <span data-i18n="hero.title_line2">Reliable</span><br />
+                <span class="text-accent" data-i18n="hero.title_accent">Printing.</span>
+              </h1>
+
+              <p class="hero-sub-bio" data-i18n="hero.bio">
+                I'm <strong>Nasrullah Hafiz</strong>, a Professional Graphic Designer, Typography Specialist & Print Production Expert. Through meticulous CMYK prepress calibration and premium packaging design, I create brand identities that ensure precise commercial results.
+              </p>
+
+              <!-- Hero Action Buttons: Placed cleanly on the left under bio -->
+              <div class="hero-left-cta-group">
+                <a href="#portfolio" class="btn-pill-action">
+                  <span class="btn-pill-dot"></span>
+                  <span data-i18n="hero.btn_work">View Work</span>
+                </a>
+                <a href="#footer" class="btn-pill-outline">
+                  <span data-i18n="hero.btn_talk">Let's Talk</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delight 3-Card Stats Row (/01, /02, /03) - Placed below hero card so it never cuts the portrait -->
+        <div class="hero-stats-panel">
+          <div class="delight-stat-card">
+            <div class="stat-card-header">
+              <span data-i18n="hero.stat1_header">Projects Completed</span>
+              <span class="stat-card-index">/01</span>
+            </div>
+            <div class="stat-card-number" data-i18n="hero.stat1_num">300+</div>
+            <div class="stat-card-label" data-i18n="hero.stat1_desc">Corporate & commercial print projects</div>
+          </div>
+
+          <div class="delight-stat-card">
+            <div class="stat-card-header">
+              <span data-i18n="hero.stat2_header">Happy Clients</span>
+              <span class="stat-card-index">/02</span>
+            </div>
+            <div class="stat-card-number" data-i18n="hero.stat2_num">270+</div>
+            <div class="stat-card-label" data-i18n="hero.stat2_desc">Worldwide brands & publishing houses</div>
+          </div>
+
+          <div class="delight-stat-card">
+            <div class="stat-card-header">
+              <span data-i18n="hero.stat3_header">Press & Color Accuracy</span>
+              <span class="stat-card-index">/03</span>
+            </div>
+            <div class="stat-card-number" data-i18n="hero.stat3_num">100%</div>
+            <div class="stat-card-label" data-i18n="hero.stat3_desc">Zero-error prepress print calibration</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT SECTION (#about)
+         ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header-delight">
+          <span class="section-tag-delight" data-i18n="about.tag">( About )</span>
+          <h2 class="section-title-delight" data-i18n="about.title">From Design to Output—<span class="text-accent">Quality in Every Detail</span>.</h2>
+          <p class="section-desc-delight" data-i18n="about.desc">
+            Crafting high-impact graphic design, commercial print production, engaging video edits, and modern web solutions.
+          </p>
+        </div>
+
+        <div class="about-grid-layout">
+          <div class="about-narrative">
+            <p data-i18n="about.p1">
+              Nasrullah Hafiz — a multidisciplinary creative specialist delivering dependable solutions across graphic design, video production, and modern web development. With deep technical expertise across print and digital mediums, every project is executed with precision from initial concept to final delivery.
+            </p>
+            <p data-i18n="about.p2">
+              Great design must work effortlessly in the real world. Whether calibrating zero-defect CMYK print files for packaging, crafting dynamic motion graphics for video campaigns, or architecting intuitive web interfaces, the priority is always commanding trust and delivering tangible commercial value.
+            </p>
+            <p data-i18n="about.p3">
+              From launching new brand identities and luxury print assets to building high-converting websites and commercial video content—dedicated to elevating your brand with speed and craft.
+            </p>
+          </div>
+
+          <div class="about-pillars-stack">
+            <div class="about-pillar-box">
+              <div class="pillar-icon-box">🎨</div>
+              <div class="pillar-content">
+                <h3 class="pillar-heading" data-i18n="about.pillar1_title">Graphics & Print Design</h3>
+                <p class="pillar-text" data-i18n="about.pillar1_desc">Brand identities, luxury packaging, and 100% press-ready CMYK prepress calibration.</p>
+              </div>
+            </div>
+
+            <div class="about-pillar-box">
+              <div class="pillar-icon-box">🎬</div>
+              <div class="pillar-content">
+                <h3 class="pillar-heading" data-i18n="about.pillar2_title">Video & Motion Production</h3>
+                <p class="pillar-text" data-i18n="about.pillar2_desc">Commercial video editing, dynamic motion graphics, color grading, and sound design.</p>
+              </div>
+            </div>
+
+            <div class="about-pillar-box">
+              <div class="pillar-icon-box">💻</div>
+              <div class="pillar-content">
+                <h3 class="pillar-heading" data-i18n="about.pillar3_title">Web & Software Solutions</h3>
+                <p class="pillar-text" data-i18n="about.pillar3_desc">Responsive, modern web development, intuitive UX/UI design, and digital platforms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICES SECTION (Services - 3 Core Creative Disciplines)
+         ========================================================================== -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header-delight">
+          <span class="section-tag-delight" data-i18n="services.tag">( Services )</span>
+          <h2 class="section-title-delight" data-i18n="services.title">Creative <span class="text-accent">Services</span>.</h2>
+          <p class="section-desc-delight" data-i18n="services.desc">
+            Explore complete capabilities, deliverables, and production workflows for your brand and business.
+          </p>
+        </div>
+
+        <div class="services-grid" id="services-grid">
+          <!-- Dynamically populated from PORTFOLIO_DATA.services -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURE 2: PRINT & PREPRESS SPECS SHOWCASE (Interactive CMYK Separator)
+         ========================================================================== -->
+    <section class="prepress-section" id="prepress-studio">
+      <div class="container">
+        <div class="section-header-delight">
+          <span class="section-tag-delight" data-i18n="cmyk.tag">( Industrial Print & Prepress Lab )</span>
+          <h2 class="section-title-delight" data-i18n="cmyk.title">Interactive <span class="text-accent">CMYK Color Plate</span> Separator.</h2>
+          <p class="section-desc-delight" data-i18n="cmyk.desc">
+            Experience how digital artwork translates into physical 4-color process printing plates (Cyan, Magenta, Yellow, Key/Black) with registered crop marks and bleed safety zones.
+          </p>
+        </div>
+
+        <div class="prepress-studio-wrapper">
+          <!-- Screen Viewport with Active Plate Simulation -->
+          <div class="prepress-screen-viewport">
+            <img src="assets/project-cmyk.jpg" alt="Active CMYK Plate Preview" id="prepress-plate-img" class="prepress-plate-img plate-mode-cmyk" />
+            
+            <!-- Registration Marks & Dielines Overlay -->
+            <div class="print-registration-marks" id="dieline-overlay">
+              <div class="dieline-legend">+3mm Bleed · Safe Zone Active</div>
+            </div>
+          </div>
+
+          <!-- Prepress Controls -->
+          <div class="prepress-controls">
+            <div>
+              <label for="prepress-artwork-select" data-i18n="cmyk.artwork_label" style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.4rem; color:var(--text-gray);">Select Press Artwork Sample:</label>
+              <select id="prepress-artwork-select" class="form-select-delight">
+                <option value="assets/project-cmyk.jpg">Visual Dialogues CMYK Editorial Magazine</option>
+                <option value="assets/project-packaging.jpg">Aurélia Elysian Packaging & Dieline</option>
+                <option value="assets/project-branding.jpg">Astoria Luxury Identity Stationery</option>
+                <option value="assets/project-typography.jpg">Bornomala Bengali Calligraphy Poster</option>
+              </select>
+            </div>
+
+            <div>
+              <div data-i18n="cmyk.plates_label" style="font-size:0.85rem; font-weight:700; margin-bottom:0.6rem; color:var(--text-gray);">Inspect Individual Color Plates:</div>
+              <div class="plate-selector-group">
+                <button class="plate-btn active" data-plate="cmyk" data-i18n="cmyk.btn_all">All CMYK (Composite)</button>
+                <button class="plate-btn" data-plate="cyan" data-i18n="cmyk.btn_c" style="border-color: rgba(0, 245, 255, 0.4);">Cyan (C) Plate</button>
+                <button class="plate-btn" data-plate="magenta" data-i18n="cmyk.btn_m" style="border-color: rgba(255, 0, 127, 0.4);">Magenta (M) Plate</button>
+                <button class="plate-btn" data-plate="yellow" data-i18n="cmyk.btn_y" style="border-color: rgba(255, 215, 0, 0.4);">Yellow (Y) Plate</button>
+                <button class="plate-btn" data-plate="black" data-i18n="cmyk.btn_k">Black (K) Plate</button>
+              </div>
+            </div>
+
+            <!-- Dieline / Registration Toggle -->
+            <div>
+              <button class="btn-pill-action" id="toggle-dieline-btn" style="width:100%; justify-content:center; padding:0.85rem 1.5rem; font-size:0.95rem;">
+                <span class="btn-pill-dot"></span>
+                <span data-i18n="cmyk.btn_toggle_dieline">Toggle Registration Crosshairs & Bleed Lines</span>
+              </button>
+            </div>
+
+            <!-- Live Prepress Specs Feedback -->
+            <div class="paper-spec-card">
+              <div data-i18n="cmyk.specs_title" style="font-size:0.8rem; font-family:var(--font-mono); color:var(--accent-primary); margin-bottom:0.5rem; text-transform:uppercase;">Technical Press Plate Specifications</div>
+              <div class="spec-row">
+                <span class="spec-label" data-i18n="cmyk.spec1_label">Halftone Screen Angle:</span>
+                <span class="spec-val" id="spec-screen-angle">Full Process (Rotated)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label" data-i18n="cmyk.spec2_label">Ink Formulation:</span>
+                <span class="spec-val" id="spec-ink-type">Cyan, Magenta, Yellow, Black</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label" data-i18n="cmyk.spec3_label">Optical Target:</span>
+                <span class="spec-val" id="spec-density">TAC: 290% Max</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURE 3: BRANDING & IDENTITY PORTFOLIO (Work)
+         ========================================================================== -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="container">
+        <div class="section-header-delight">
+          <span class="section-tag-delight" data-i18n="work.tag">( কাজ )</span>
+          <h2 class="section-title-delight" data-i18n="work.title"><span class="text-accent">কাজসমূহ</span></h2>
+        </div>
+
+        <!-- Filter Navigation -->
+        <div class="portfolio-filter-nav">
+          <button class="port-filter-btn active" data-filter="all" data-i18n="work.filter_all">All Projects</button>
+          <button class="port-filter-btn" data-filter="branding" data-i18n="work.filter_branding">Branding & Identity</button>
+          <button class="port-filter-btn" data-filter="packaging" data-i18n="work.filter_packaging">Packaging & Labels</button>
+          <button class="port-filter-btn" data-filter="prepress" data-i18n="work.filter_prepress">Print & Prepress</button>
+          <button class="port-filter-btn" data-filter="typography" data-i18n="work.filter_typography">Typography & Lettering</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-delight-grid" id="portfolio-grid">
+          <!-- Dynamically populated from PORTFOLIO_DATA.projects -->
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ==========================================================================
+         WORKING PROCESS (Delight 01 - 05 Steps)
+         ========================================================================== -->
+    <section class="process-section" id="process">
+      <div class="container">
+        <div class="section-header-delight">
+          <span class="section-tag-delight" data-i18n="process.tag">( Working Process )</span>
+          <h2 class="section-title-delight" data-i18n="process.title">From Napkin Sketch to <span class="text-accent">The Printing Press</span>.</h2>
+          <p class="section-desc-delight" data-i18n="process.desc">
+            A structured 5-stage methodology ensuring pixel-perfect screen design and flawless ink-on-paper realization.
+          </p>
+        </div>
+
+        <div class="process-grid" id="process-grid">
+          <!-- Dynamically populated from PORTFOLIO_DATA.processSteps -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WHY WORK WITH ME (Delight 01 - 06 Cards)
+         ========================================================================== -->
+    <section class="why-section" id="why">
+      <div class="container">
+        <div class="section-header-delight">
+          <span class="section-tag-delight" data-i18n="why.tag">( Why Choose My Studio )</span>
+          <h2 class="section-title-delight" data-i18n="why.title">Craft That Eliminates <span class="text-accent">Pressroom Risks</span>.</h2>
+          <p class="section-desc-delight" data-i18n="why.desc">
+            Why leading brands, luxury manufacturers, and publishing houses trust my design and prepress files.
+          </p>
+        </div>
+
+        <div class="why-grid" id="why-grid">
+          <!-- Dynamically populated from PORTFOLIO_DATA.whyChooseMe -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQS SECTION (Delight Style)
+         ========================================================================== -->
+    <section class="faqs-section" id="faqs">
+      <div class="container">
+        <div class="section-header-delight" style="text-align: center;">
+          <span class="section-tag-delight" data-i18n="faq.tag">( Frequently Asked Questions )</span>
+          <h2 class="section-title-delight" data-i18n="faq.title" style="margin: 0 auto;">Your Questions, My Clear and Honest Answers.</h2>
+        </div>
+
+        <div class="faq-accordion-list" id="faqs-container">
+          <!-- Injected from PORTFOLIO_DATA.faqs -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         READY TO START PROJECT CTA CARD (Delight Style)
+         ========================================================================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <h2 data-i18n="cta.title">Ready to Elevate Your Brand & <span class="text-accent">Print Quality</span>?</h2>
+          <p data-i18n="cta.desc">Let's collaborate to build an unforgettable visual identity, precision packaging dieline, or bespoke Bengali font.</p>
+          <a href="#footer" class="btn-pill-action" style="font-size:1.1rem; padding:1.1rem 2.5rem; display:inline-flex;">
+            <span class="btn-pill-dot"></span>
+            <span data-i18n="cta.btn">Start Your Project Today</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       CASE STUDY MODAL DIALOG
+       ========================================================================== -->
+  <dialog id="case-study-modal" style="border:1px solid var(--border-accent); border-radius:var(--radius-card); background:var(--bg-card); color:var(--text-white); width:90vw; max-width:850px; max-height:85vh; padding:2rem; margin:auto; box-shadow:0 30px 60px rgba(0,0,0,0.8); z-index:1000;">
+    <div id="case-study-modal-body">
+      <!-- Injected by js/main.js -->
+    </div>
+  </dialog>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <!-- ==========================================================================
+       FOOTER (Modern Reference Design - Yahia Bin Zaman style)
+       ========================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-modern-grid">
+        <!-- Brand & Socials Column (Left, Wide) -->
+        <div class="footer-col-brand">
+          <h2 class="footer-brand-title" data-i18n="footer.brand_title">Nasrullah Hafiz</h2>
+          <p class="footer-brand-tagline" data-i18n="footer.tagline">Helping Brands & Teams Shine Globally</p>
+          
+          <!-- Sleek Circular Social Icons (Reference Style: Solid White Circles with Bold Black Icons) -->
+          <div class="footer-social-row">
+            <!-- LinkedIn (in) -->
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 26 24" width="20" height="20" fill="currentColor">
+                <circle cx="4.9" cy="4" r="2.2"></circle>
+                <rect x="2.7" y="8.5" width="4.4" height="12.5" rx="0.6"></rect>
+                <path d="M10.2 8.5h4.1v1.8c.8-1.2 2.3-2.1 4.5-2.1 3.5 0 5.2 2.2 5.2 5.8V21h-4.3v-6.2c0-1.8-.7-2.9-2.3-2.9-1.5 0-2.3 1.1-2.3 2.9V21h-4.9V8.5z"></path>
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5.5" ry="5.5"></rect>
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+              </svg>
+            </a>
+
+            <!-- Behance (Bē) -->
+            <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Behance" title="Behance Portfolio">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M8.228 15.01c.441 0 .825-.05 1.15-.152.327-.101.597-.247.81-.437.215-.19.37-.43.467-.721.096-.29.145-.632.145-1.026 0-.49-.102-.897-.306-1.222-.204-.325-.515-.558-.934-.7 1.077-.428 1.616-1.246 1.616-2.455 0-.416-.073-.78-.22-1.093-.146-.312-.358-.57-.635-.774-.277-.204-.616-.358-1.017-.463-.401-.104-.867-.156-1.398-.156H2.5v9.988h5.728zm-3.26-4.275h2.894c.571 0 .984.095 1.238.286.255.19.382.493.382.909 0 .225-.045.419-.136.582-.09.163-.223.29-.398.38-.176.09-.394.148-.654.175-.261.026-.566.04-.915.04H4.968v-2.372zm0-3.693h2.646c.513 0 .894.083 1.144.248.25.166.375.438.375.816 0 .412-.132.7-.395.864-.264.164-.664.246-1.2.246H4.968V7.042zm11.524 5.92c.328 0 .653-.045.975-.135.322-.09.613-.23.874-.42.261-.19.467-.442.617-.756.15-.314.23-.701.24-1.161h-5.07c.046.467.147.854.303 1.161.156.307.355.556.597.747.242.19.519.33.83.42.311.09.646.135 1.004.135zm2.846-3.957c-.015-.436-.089-.824-.223-1.164-.133-.34-.326-.628-.578-.864-.252-.236-.562-.417-.93-.543-.368-.126-.798-.189-1.29-.189-.505 0-.962.068-1.37.204-.408.136-.757.34-1.047.612-.29.272-.511.616-.663 1.032-.152.416-.233.913-.243 1.491h6.353c-.004-.2-.007-.393-.009-.579zM15.42 4.498h4.484v1.178H15.42V4.498z"></path>
+              </svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/8801700000000" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp" title="WhatsApp">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor">
+                <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.52-.14-2.86-.14C11.9 2 10 3.65 10 6.85v2.65H7v4h3V22h4v-8.5z"></path>
+              </svg>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:nasrullah.hafiz.design@gmail.com" class="footer-social-btn" aria-label="Email" title="Email Nasrullah">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Company Column -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-heading" data-i18n="footer.col_company">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero" data-i18n="footer.link_home">Home</a></li>
+            <li><a href="#portfolio" data-i18n="footer.link_playground">Playground</a></li>
+            <li><a href="#about" data-i18n="footer.link_about">About</a></li>
+            <li><a href="#footer" data-i18n="footer.link_contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Column -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-heading" data-i18n="footer.col_legal">Legal</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#about" data-i18n="footer.link_privacy">Privacy Policy</a></li>
+            <li><a href="#services" data-i18n="footer.link_terms">Terms of Use</a></li>
+            <li><a href="#services" data-i18n="footer.link_sales">Sales Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Get Started Action Column -->
+        <div class="footer-col-action">
+          <h4 class="footer-col-heading" data-i18n="footer.col_get_started">Get Started</h4>
+          <a href="#footer" class="footer-action-circle-btn" aria-label="Get Started" title="Start a Project">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar (3-Section Reference Bar) -->
+      <div class="footer-bottom-bar-reference">
+        <div class="footer-bottom-left">
+          <a href="#about" class="footer-bottom-link-italic" data-i18n="footer.bottom_terms">Terms & Support</a>
+          <span class="footer-bottom-bullet">•</span>
+          <a href="#about" class="footer-bottom-link-italic" data-i18n="footer.bottom_privacy">Privacy Policy</a>
+        </div>
+
+        <div class="footer-bottom-center">
+          <span class="footer-bottom-center-text" data-i18n="footer.bottom_credit">Nasrullah Hafiz × NSR.</span>
+        </div>
+
+        <div class="footer-bottom-right">
+          <span class="footer-copyright-text" data-i18n="footer.rights">© 2026 Nasrullah Hafiz. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js?v=25"></script>
+  <script src="js/projects-data.js?v=25"></script>
+  <script src="js/main.js?v=25"></script>
+</body>
+</html>
