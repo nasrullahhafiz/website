@@ -1988,18 +1988,18 @@ a {
   transform: translateY(-1px);
   background: radial-gradient(
     circle 170px at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
-    #b54754 0%,
-    #8f2835 24%,
-    #d87c88 44%,
-    #eed9dc 66%,
-    #ffffff 84%,
+    #cf7e8a 0%,
+    #dca6ad 26%,
+    #ebd0d4 50%,
+    #f6ebed 72%,
+    #ffffff 88%,
     #ffffff 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 2px 14px rgba(181, 71, 84, 0.26));
+  filter: drop-shadow(0 2px 10px rgba(181, 71, 84, 0.12));
 }
 
 .footer-brand-tagline {
@@ -2249,18 +2249,18 @@ a {
 [data-theme="light"] .footer-brand-title:hover {
   background: radial-gradient(
     circle 170px at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
-    #b54754 0%,
-    #8f2835 24%,
-    #5c1a23 44%,
-    #2a0d11 66%,
-    #09090b 84%,
+    #7a3842 0%,
+    #5c252d 26%,
+    #3f161c 50%,
+    #240b10 72%,
+    #09090b 88%,
     #09090b 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 2px 10px rgba(181, 71, 84, 0.18));
+  filter: drop-shadow(0 2px 8px rgba(181, 71, 84, 0.08));
 }
 
 [data-theme="light"] .footer-brand-tagline {
