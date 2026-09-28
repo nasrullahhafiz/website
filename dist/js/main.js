@@ -374,6 +374,7 @@ function initPrepressStudio() {
   const dielineOverlay = document.getElementById('dieline-overlay');
   const toggleDielineBtn = document.getElementById('toggle-dieline-btn');
   const artworkSelect = document.getElementById('prepress-artwork-select');
+  if (!plateImg) return;
 
   // Spec Info Elements
   const specScreenAngle = document.getElementById('spec-screen-angle');

@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=31" />
+  <link rel="stylesheet" href="css/style.css?v=32" />
 </head>
 <body>
 
@@ -174,7 +174,6 @@
     <section class="about-section" id="about">
       <div class="container">
         <div class="section-header-delight">
-          <span class="section-tag-delight" data-i18n="about.tag">( About )</span>
           <h2 class="section-title-delight" data-i18n="about.title">From Design to Output—<span class="text-accent">Quality in Every Detail</span>.</h2>
           <p class="section-desc-delight" data-i18n="about.desc">
             Crafting high-impact graphic design, commercial print production, engaging video edits, and modern web solutions.
@@ -229,7 +228,6 @@
     <section class="services-section" id="services">
       <div class="container">
         <div class="section-header-delight">
-          <span class="section-tag-delight" data-i18n="services.tag">( Services )</span>
           <h2 class="section-title-delight" data-i18n="services.title">Creative <span class="text-accent">Services</span>.</h2>
           <p class="section-desc-delight" data-i18n="services.desc">
             Explore complete capabilities, deliverables, and production workflows for your brand and business.
@@ -242,81 +240,7 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         FEATURE 2: PRINT & PREPRESS SPECS SHOWCASE (Interactive CMYK Separator)
-         ========================================================================== -->
-    <section class="prepress-section" id="prepress-studio">
-      <div class="container">
-        <div class="section-header-delight">
-          <span class="section-tag-delight" data-i18n="cmyk.tag">( Industrial Print & Prepress Lab )</span>
-          <h2 class="section-title-delight" data-i18n="cmyk.title">Interactive <span class="text-accent">CMYK Color Plate</span> Separator.</h2>
-          <p class="section-desc-delight" data-i18n="cmyk.desc">
-            Experience how digital artwork translates into physical 4-color process printing plates (Cyan, Magenta, Yellow, Key/Black) with registered crop marks and bleed safety zones.
-          </p>
-        </div>
 
-        <div class="prepress-studio-wrapper">
-          <!-- Screen Viewport with Active Plate Simulation -->
-          <div class="prepress-screen-viewport">
-            <img src="assets/project-cmyk.jpg" alt="Active CMYK Plate Preview" id="prepress-plate-img" class="prepress-plate-img plate-mode-cmyk" />
-            
-            <!-- Registration Marks & Dielines Overlay -->
-            <div class="print-registration-marks" id="dieline-overlay">
-              <div class="dieline-legend">+3mm Bleed · Safe Zone Active</div>
-            </div>
-          </div>
-
-          <!-- Prepress Controls -->
-          <div class="prepress-controls">
-            <div>
-              <label for="prepress-artwork-select" data-i18n="cmyk.artwork_label" style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.4rem; color:var(--text-gray);">Select Press Artwork Sample:</label>
-              <select id="prepress-artwork-select" class="form-select-delight">
-                <option value="assets/project-cmyk.jpg">Visual Dialogues CMYK Editorial Magazine</option>
-                <option value="assets/project-packaging.jpg">Aurélia Elysian Packaging & Dieline</option>
-                <option value="assets/project-branding.jpg">Astoria Luxury Identity Stationery</option>
-                <option value="assets/project-typography.jpg">Bornomala Bengali Calligraphy Poster</option>
-              </select>
-            </div>
-
-            <div>
-              <div data-i18n="cmyk.plates_label" style="font-size:0.85rem; font-weight:700; margin-bottom:0.6rem; color:var(--text-gray);">Inspect Individual Color Plates:</div>
-              <div class="plate-selector-group">
-                <button class="plate-btn active" data-plate="cmyk" data-i18n="cmyk.btn_all">All CMYK (Composite)</button>
-                <button class="plate-btn" data-plate="cyan" data-i18n="cmyk.btn_c" style="border-color: rgba(0, 245, 255, 0.4);">Cyan (C) Plate</button>
-                <button class="plate-btn" data-plate="magenta" data-i18n="cmyk.btn_m" style="border-color: rgba(255, 0, 127, 0.4);">Magenta (M) Plate</button>
-                <button class="plate-btn" data-plate="yellow" data-i18n="cmyk.btn_y" style="border-color: rgba(255, 215, 0, 0.4);">Yellow (Y) Plate</button>
-                <button class="plate-btn" data-plate="black" data-i18n="cmyk.btn_k">Black (K) Plate</button>
-              </div>
-            </div>
-
-            <!-- Dieline / Registration Toggle -->
-            <div>
-              <button class="btn-pill-action" id="toggle-dieline-btn" style="width:100%; justify-content:center; padding:0.85rem 1.5rem; font-size:0.95rem;">
-                <span class="btn-pill-dot"></span>
-                <span data-i18n="cmyk.btn_toggle_dieline">Toggle Registration Crosshairs & Bleed Lines</span>
-              </button>
-            </div>
-
-            <!-- Live Prepress Specs Feedback -->
-            <div class="paper-spec-card">
-              <div data-i18n="cmyk.specs_title" style="font-size:0.8rem; font-family:var(--font-mono); color:var(--accent-primary); margin-bottom:0.5rem; text-transform:uppercase;">Technical Press Plate Specifications</div>
-              <div class="spec-row">
-                <span class="spec-label" data-i18n="cmyk.spec1_label">Halftone Screen Angle:</span>
-                <span class="spec-val" id="spec-screen-angle">Full Process (Rotated)</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label" data-i18n="cmyk.spec2_label">Ink Formulation:</span>
-                <span class="spec-val" id="spec-ink-type">Cyan, Magenta, Yellow, Black</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label" data-i18n="cmyk.spec3_label">Optical Target:</span>
-                <span class="spec-val" id="spec-density">TAC: 290% Max</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ==========================================================================
          FEATURE 3: BRANDING & IDENTITY PORTFOLIO (Work)
@@ -324,7 +248,6 @@
     <section class="portfolio-section" id="portfolio">
       <div class="container">
         <div class="section-header-delight">
-          <span class="section-tag-delight" data-i18n="work.tag">( কাজ )</span>
           <h2 class="section-title-delight" data-i18n="work.title"><span class="text-accent">কাজসমূহ</span></h2>
         </div>
 
@@ -352,7 +275,6 @@
     <section class="process-section" id="process">
       <div class="container">
         <div class="section-header-delight">
-          <span class="section-tag-delight" data-i18n="process.tag">( Working Process )</span>
           <h2 class="section-title-delight" data-i18n="process.title">From Napkin Sketch to <span class="text-accent">The Printing Press</span>.</h2>
           <p class="section-desc-delight" data-i18n="process.desc">
             A structured 5-stage methodology ensuring pixel-perfect screen design and flawless ink-on-paper realization.
@@ -371,7 +293,6 @@
     <section class="why-section" id="why">
       <div class="container">
         <div class="section-header-delight">
-          <span class="section-tag-delight" data-i18n="why.tag">( Why Choose My Studio )</span>
           <h2 class="section-title-delight" data-i18n="why.title">Craft That Eliminates <span class="text-accent">Pressroom Risks</span>.</h2>
           <p class="section-desc-delight" data-i18n="why.desc">
             Why leading brands, luxury manufacturers, and publishing houses trust my design and prepress files.
@@ -390,7 +311,6 @@
     <section class="faqs-section" id="faqs">
       <div class="container">
         <div class="section-header-delight" style="text-align: center;">
-          <span class="section-tag-delight" data-i18n="faq.tag">( Frequently Asked Questions )</span>
           <h2 class="section-title-delight" data-i18n="faq.title" style="margin: 0 auto;">Your Questions, My Clear and Honest Answers.</h2>
         </div>
 
@@ -546,6 +466,6 @@
   <!-- Scripts -->
   <script src="js/translations.js?v=27"></script>
   <script src="js/projects-data.js?v=25"></script>
-  <script src="js/main.js?v=26"></script>
+  <script src="js/main.js?v=27"></script>
 </body>
 </html>
