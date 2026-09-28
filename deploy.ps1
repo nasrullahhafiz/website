@@ -20,27 +20,23 @@ Write-Host "dist folder ready!" -ForegroundColor Green
 Write-Host "`n[2/3] Checking Git status..." -ForegroundColor Yellow
 Set-Location -Path $PSScriptRoot
 git add .
-git commit -m "Deploy update: $(Get-Date -Format 'yyyy-MM-dd HH:mm')" 2>$null
+git commit -m "feat: Reactive proximity stroke on CTA card, liquid ruby sheen on footer brand, and update credit to nasrullah x naslab" 2>$null
 
-# 3. Check GitHub authentication
-Write-Host "`n[3/3] Authenticating & Pushing to GitHub..." -ForegroundColor Yellow
-
-# Configure gh as git credential helper
-& "C:\Program Files\GitHub CLI\gh.exe" auth setup-git 2>$null
-
-# Try pushing
-$pushResult = git push -u origin main 2>&1
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "`nGitHub login required. Starting login..." -ForegroundColor Yellow
-    & "C:\Program Files\GitHub CLI\gh.exe" auth login --web -h github.com
-    & "C:\Program Files\GitHub CLI\gh.exe" auth setup-git
-    git push -u origin main
+# 3. Push to GitHub
+Write-Host "`n[3/3] Pushing to GitHub..." -ForegroundColor Yellow
+$token = $env:GH_PAT
+if ($token) {
+    $remoteUrl = "https://${token}@github.com/nasrullahhafiz/website.git"
+    git push $remoteUrl main:main
+} else {
+    git push origin main
 }
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "`n======================================" -ForegroundColor Green
     Write-Host " Successfully pushed to GitHub!" -ForegroundColor Green
     Write-Host " URL: https://github.com/nasrullahhafiz/website" -ForegroundColor Cyan
+    Write-Host " Vercel Live: https://nasrullahhafiz.vercel.app/" -ForegroundColor Cyan
     Write-Host "======================================" -ForegroundColor Green
 } else {
     Write-Host "`nFailed to push. Please verify repository exists and try again." -ForegroundColor Red

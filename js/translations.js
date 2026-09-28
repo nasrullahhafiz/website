@@ -140,7 +140,7 @@ const TRANSLATIONS = {
     "footer.col_get_started": "Get Started",
     "footer.bottom_terms": "Terms & Support",
     "footer.bottom_privacy": "Privacy Policy",
-    "footer.bottom_credit": "Nasrullah Hafiz × NSR.",
+    "footer.bottom_credit": "nasrullah × naslab",
     "footer.rights": "© 2026 Nasrullah Hafiz. All rights reserved."
   },
 
@@ -280,7 +280,7 @@ const TRANSLATIONS = {
     "footer.col_get_started": "শুরু করুন",
     "footer.bottom_terms": "শর্তাবলী ও সহায়তা",
     "footer.bottom_privacy": "গোপনীয়তা নীতি",
-    "footer.bottom_credit": "নাসরুল্লাহ হাফিজ × NSR.",
+    "footer.bottom_credit": "nasrullah × naslab",
     "footer.rights": "© ২০২৬ নাসরুল্লাহ হাফিজ। সর্বস্বত্ব সংরক্ষিত।"
   }
 };

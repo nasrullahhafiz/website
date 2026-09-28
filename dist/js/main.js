@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqs();
   initFooterSocialPopover();
   initFooterBrandSpotlight();
+  initCtaCardBorderGlow();
 });
 
 /* ==========================================================================
@@ -987,6 +988,97 @@ function initFooterBrandSpotlight() {
   brandTitle.addEventListener('mouseleave', () => {
     isHovered = false;
     brandTitle.classList.remove('has-spotlight');
+  });
+}
+
+/* ==========================================================================
+   14. CTA CARD DYNAMIC BORDER/STROKE GLOW (Cursor Proximity Responsive)
+   Tracks cursor coordinates relative to the CTA banner card. As the cursor
+   moves, the stroke edge closest to the pointer dynamically illuminates with
+   a silky coral-rose breathing gradient, calculating real-time edge distance.
+   ========================================================================== */
+function initCtaCardBorderGlow() {
+  const card = document.querySelector('.cta-banner-card');
+  if (!card) return;
+
+  let targetX = 50;
+  let targetY = 50;
+  let targetProx = 0.5;
+  let currentX = 50;
+  let currentY = 50;
+  let currentProx = 0.5;
+  let isHovered = false;
+  let rAF = null;
+
+  function tick() {
+    currentX += (targetX - currentX) * 0.12;
+    currentY += (targetY - currentY) * 0.12;
+    currentProx += (targetProx - currentProx) * 0.12;
+
+    card.style.setProperty('--card-mouse-x', `${currentX.toFixed(2)}%`);
+    card.style.setProperty('--card-mouse-y', `${currentY.toFixed(2)}%`);
+    card.style.setProperty('--edge-proximity', `${currentProx.toFixed(3)}`);
+
+    const dx = Math.abs(targetX - currentX);
+    const dy = Math.abs(targetY - currentY);
+    const dp = Math.abs(targetProx - currentProx);
+
+    if (isHovered || dx > 0.05 || dy > 0.05 || dp > 0.005) {
+      rAF = requestAnimationFrame(tick);
+    } else {
+      rAF = null;
+    }
+  }
+
+  function updateCoords(e) {
+    const rect = card.getBoundingClientRect();
+    const relX = e.clientX - rect.left;
+    const relY = e.clientY - rect.top;
+
+    // Percentages (0 to 100)
+    const pctX = (relX / rect.width) * 100;
+    const pctY = (relY / rect.height) * 100;
+    targetX = Math.max(0, Math.min(100, pctX));
+    targetY = Math.max(0, Math.min(100, pctY));
+
+    // Distance from edges (top, bottom, left, right in px)
+    const distLeft = Math.max(0, relX);
+    const distRight = Math.max(0, rect.width - relX);
+    const distTop = Math.max(0, relY);
+    const distBottom = Math.max(0, rect.height - relY);
+    const minDist = Math.min(distLeft, distRight, distTop, distBottom);
+
+    // Proximity: 1.0 when right near the border/stroke, smoothly scaling as it moves inward
+    const maxThreshold = Math.min(rect.width, rect.height) * 0.45;
+    const proximity = Math.max(0.2, Math.min(1, 1 - (minDist / Math.max(1, maxThreshold))));
+    targetProx = proximity;
+  }
+
+  card.addEventListener('mouseenter', (e) => {
+    isHovered = true;
+    updateCoords(e);
+    currentX = targetX;
+    currentY = targetY;
+    currentProx = targetProx;
+    card.style.setProperty('--card-mouse-x', `${currentX.toFixed(2)}%`);
+    card.style.setProperty('--card-mouse-y', `${currentY.toFixed(2)}%`);
+    card.style.setProperty('--edge-proximity', `${currentProx.toFixed(3)}`);
+    card.classList.add('is-hovered');
+    if (!rAF) rAF = requestAnimationFrame(tick);
+  });
+
+  card.addEventListener('mousemove', (e) => {
+    updateCoords(e);
+    if (!rAF) rAF = requestAnimationFrame(tick);
+  });
+
+  card.addEventListener('mouseleave', () => {
+    isHovered = false;
+    card.classList.remove('is-hovered');
+    targetX = 50;
+    targetY = 50;
+    targetProx = 0.4;
+    if (!rAF) rAF = requestAnimationFrame(tick);
   });
 }
 
