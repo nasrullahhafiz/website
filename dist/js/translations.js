@@ -123,8 +123,8 @@ const TRANSLATIONS = {
 
     // CTA
     "cta.title": "Ready to Elevate Your Brand & <span class=\"text-accent\">Print Quality</span>?",
-    "cta.desc": "Let's collaborate to build an unforgettable visual identity, precision packaging dieline, or bespoke Bengali font.",
-    "cta.btn": "Start Your Project Today",
+    "cta.desc": "From creative design and precision print to packaging and total brand solutions, we are right by your side.",
+    "cta.btn": "Discuss Your Project",
 
     "footer.brand_title": "Nasrullah Hafiz",
     "footer.tagline": "Helping Brands & Teams Shine Globally",
@@ -263,8 +263,8 @@ const TRANSLATIONS = {
 
     // CTA
     "cta.title": "আপনার ব্র্যান্ড ও <span class=\"text-accent\">প্রিন্টের মান</span> এক ধাপ এগিয়ে নিতে প্রস্তুত?",
-    "cta.desc": "চলুন একসাথে তৈরি করি স্মরণীয় ভিজ্যুয়াল আইডেন্টিটি, নিখুঁত প্যাকেজিং ডাই-লাইন অথবা কাস্টম বাংলা ফন্ট।",
-    "cta.btn": "আজই প্রজেক্ট শুরু করুন",
+    "cta.desc": "ক্রিয়েটিভ ডিজাইন, নিখুঁত প্রিন্ট, প্যাকেজিং এবং টোটাল ব্র্যান্ড সল্যুশনে আমরা আছি আপনার পাশে।",
+    "cta.btn": "আপনার প্রজেক্ট নিয়ে কথা বলুন",
 
     "footer.brand_title": "নাসরুল্লাহ হাফিজ",
     "footer.tagline": "ব্র্যান্ড ও প্রকাশনাকে বিশ্বমানের প্রিন্ট ও টাইপোগ্রাফিতে রূপান্তর",
