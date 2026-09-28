@@ -122,8 +122,8 @@ const TRANSLATIONS = {
     "faq.title": "Frequently Asked Questions & Clear Answers.",
 
     // CTA
-    "cta.title": "Ready to Elevate Your Brand & <span class=\"text-accent\">Print Quality</span>?",
-    "cta.desc": "From creative design and precision print to packaging and total brand solutions, we are right by your side.",
+    "cta.title": "Creative Design, Precision Print, Packaging & <span class=\"text-accent\">Total Brand Solutions</span> — We Are By Your Side.",
+    "cta.desc": "",
     "cta.btn": "Discuss Your Project",
 
     "footer.brand_title": "Nasrullah Hafiz",
@@ -262,8 +262,8 @@ const TRANSLATIONS = {
     "faq.title": "সাধারণ জিজ্ঞাসা ও স্পষ্ট উত্তর।",
 
     // CTA
-    "cta.title": "আপনার ব্র্যান্ড ও <span class=\"text-accent\">প্রিন্টের মান</span> এক ধাপ এগিয়ে নিতে প্রস্তুত?",
-    "cta.desc": "ক্রিয়েটিভ ডিজাইন, নিখুঁত প্রিন্ট, প্যাকেজিং এবং টোটাল ব্র্যান্ড সল্যুশনে আমরা আছি আপনার পাশে।",
+    "cta.title": "ক্রিয়েটিভ ডিজাইন, নিখুঁত প্রিন্ট, প্যাকেজিং এবং <span class=\"text-accent\">টোটাল ব্র্যান্ড সল্যুশনে</span> আমরা আছি আপনার পাশে।",
+    "cta.desc": "",
     "cta.btn": "আপনার প্রজেক্ট নিয়ে কথা বলুন",
 
     "footer.brand_title": "নাসরুল্লাহ হাফিজ",
