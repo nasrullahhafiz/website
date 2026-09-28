@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProcessAndWhy();
   initFaqs();
   initFooterSocialPopover();
+  initFooterBrandSpotlight();
 });
 
 /* ==========================================================================
@@ -917,4 +918,75 @@ function initFooterSocialPopover() {
     }
   });
 }
+
+/* ==========================================================================
+   13. FOOTER BRAND INTERACTIVE SPOTLIGHT (Cursor Tracking Radial Flow)
+   Follows cursor position smoothly across typography, concentrating the
+   velvety wine-red gradient directly beneath the mouse and diffusing outward.
+   ========================================================================== */
+function initFooterBrandSpotlight() {
+  const brandTitle = document.querySelector('.footer-brand-title');
+  if (!brandTitle) return;
+
+  let targetX = 50;
+  let targetY = 50;
+  let currentX = 50;
+  let currentY = 50;
+  let isHovered = false;
+  let rAF = null;
+
+  function tick() {
+    // Silky smooth damping interpolation (lerp)
+    currentX += (targetX - currentX) * 0.15;
+    currentY += (targetY - currentY) * 0.15;
+
+    brandTitle.style.setProperty('--spotlight-x', `${currentX.toFixed(2)}%`);
+    brandTitle.style.setProperty('--spotlight-y', `${currentY.toFixed(2)}%`);
+
+    const dx = Math.abs(targetX - currentX);
+    const dy = Math.abs(targetY - currentY);
+
+    if (isHovered || dx > 0.05 || dy > 0.05) {
+      rAF = requestAnimationFrame(tick);
+    } else {
+      rAF = null;
+    }
+  }
+
+  function getCoords(e) {
+    const rect = brandTitle.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    return {
+      x: Math.max(0, Math.min(100, x)),
+      y: Math.max(0, Math.min(100, y))
+    };
+  }
+
+  brandTitle.addEventListener('mouseenter', (e) => {
+    isHovered = true;
+    const coords = getCoords(e);
+    targetX = coords.x;
+    targetY = coords.y;
+    currentX = coords.x;
+    currentY = coords.y;
+    brandTitle.style.setProperty('--spotlight-x', `${currentX.toFixed(2)}%`);
+    brandTitle.style.setProperty('--spotlight-y', `${currentY.toFixed(2)}%`);
+    brandTitle.classList.add('has-spotlight');
+    if (!rAF) rAF = requestAnimationFrame(tick);
+  });
+
+  brandTitle.addEventListener('mousemove', (e) => {
+    const coords = getCoords(e);
+    targetX = coords.x;
+    targetY = coords.y;
+    if (!rAF) rAF = requestAnimationFrame(tick);
+  });
+
+  brandTitle.addEventListener('mouseleave', () => {
+    isHovered = false;
+    brandTitle.classList.remove('has-spotlight');
+  });
+}
+
 
