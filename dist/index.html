@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=34" />
+  <link rel="stylesheet" href="css/style.css?v=35" />
 </head>
 <body>
 
@@ -56,13 +56,8 @@
         </li>
       </ul>
 
-      <!-- Nav Actions: Language Toggle + Theme Toggle + Let's Talk CTA + Mobile Hamburger -->
+      <!-- Nav Actions: Let's Talk CTA + Mobile Hamburger -->
       <div class="nav-actions">
-        <!-- 1-Click Bilingual Language Toggle (English <-> বাংলা) -->
-        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle Language" title="English / বাংলা" type="button">
-          <span id="lang-indicator">বাং</span>
-        </button>
-
         <a href="#footer" class="btn-header-cta">
           <span data-i18n="nav.talk">Let's Talk</span>
         </a>
@@ -441,6 +436,13 @@
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
+
+          <!-- 1-Click Bilingual Language Toggle (English <-> বাংলা) -->
+          <div class="footer-lang-wrapper">
+            <button id="lang-toggle" class="footer-lang-toggle-btn" aria-label="Toggle Language" title="English / বাংলা" type="button">
+              <span id="lang-indicator">বাং</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -466,6 +468,6 @@
   <!-- Scripts -->
   <script src="js/translations.js?v=28"></script>
   <script src="js/projects-data.js?v=25"></script>
-  <script src="js/main.js?v=28"></script>
+  <script src="js/main.js?v=29"></script>
 </body>
 </html>

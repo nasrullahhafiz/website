@@ -2275,6 +2275,54 @@ a {
   box-shadow: 0 8px 30px var(--accent-glow);
 }
 
+/* Footer Language Toggle Button (Positioned below Get Started circle button) */
+.footer-lang-wrapper {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer-lang-toggle-btn {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #f4f4f5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+.footer-lang-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.32);
+  transform: scale(1.08);
+  color: var(--accent-primary);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="light"] .footer-lang-toggle-btn {
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  color: #18181b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .footer-lang-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.12);
+  color: var(--accent-primary);
+}
+
 /* Reference Bottom Bar (3-column layout) */
 .footer-bottom-bar-reference {
   display: flex;
