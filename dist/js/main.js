@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initInteractiveMouseEffects();
   initAvatarInteractions();
   initNavigation();
+  initBrandLogoCycle();
   initServices();
   initPrepressStudio();
   initPortfolio();
@@ -233,6 +234,51 @@ function initNavigation() {
   }, { rootMargin: '-25% 0px -65% 0px' });
 
   sections.forEach(s => observer.observe(s));
+}
+
+/* ==========================================================================
+   5.1 BRAND LOGO CYCLE CONTROLLER (Periodically Reveals Full Name on Mobile)
+   ========================================================================== */
+function initBrandLogoCycle() {
+  const brandPill = document.getElementById('brand-pill');
+  if (!brandPill) return;
+
+  let isManualTap = false;
+  let manualResetTimer = null;
+
+  function expandBrand() {
+    if (isManualTap) return;
+    brandPill.classList.add('is-expanded');
+    setTimeout(() => {
+      if (!isManualTap) {
+        brandPill.classList.remove('is-expanded');
+      }
+    }, 3200); // Displays "NASRULLAH HAFIZ" for 3.2s
+  }
+
+  // Initial expansion after 2 seconds on page load
+  setTimeout(expandBrand, 2000);
+
+  // Periodic subtle expansion every 8.5 seconds
+  setInterval(expandBrand, 8500);
+
+  // Mobile Tap / Touch support
+  brandPill.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      isManualTap = true;
+      clearTimeout(manualResetTimer);
+      const isNowExpanded = brandPill.classList.toggle('is-expanded');
+      if (isNowExpanded) {
+        manualResetTimer = setTimeout(() => {
+          brandPill.classList.remove('is-expanded');
+          isManualTap = false;
+        }, 4000);
+      } else {
+        isManualTap = false;
+      }
+    }
+  });
 }
 
 /* ==========================================================================

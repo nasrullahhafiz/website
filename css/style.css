@@ -201,7 +201,8 @@ a {
               transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.brand-pill-btn:hover {
+.brand-pill-btn:hover,
+.brand-pill-btn.is-expanded {
   width: 202px; /* Smoothly expands to comfortably fit "NASRULLAH HAFIZ" + icon */
   box-shadow: 0 6px 24px rgba(255, 255, 255, 0.32);
 }
@@ -217,7 +218,8 @@ a {
   pointer-events: none;
 }
 
-.brand-pill-btn:hover .name-short {
+.brand-pill-btn:hover .name-short,
+.brand-pill-btn.is-expanded .name-short {
   opacity: 0;
   transform: translateX(-16px);
 }
@@ -238,7 +240,8 @@ a {
   transition: opacity 0.4s ease 0.12s, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
 }
 
-.brand-pill-btn:hover .name-full {
+.brand-pill-btn:hover .name-full,
+.brand-pill-btn.is-expanded .name-full {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
@@ -2697,21 +2700,56 @@ a {
     position: relative !important;
   }
 
-  /* Lock brand pill button to compact 66px width on mobile, disable wide 202px expansion */
-  .brand-pill-btn,
-  .brand-pill-btn:hover {
+  /* Mobile Brand Pill: Default 66px, smoothly expands to 188px on cycle & tap */
+  .brand-pill-btn {
     width: 66px !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
     transform: none !important;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
-  .brand-pill-btn .name-short,
-  .brand-pill-btn:hover .name-short {
+
+  .brand-pill-btn.is-expanded {
+    width: 188px !important;
+    box-shadow: 0 6px 22px rgba(255, 255, 255, 0.28) !important;
+  }
+
+  .brand-pill-btn .name-short {
     opacity: 1 !important;
     transform: none !important;
+    transition: opacity 0.3s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
-  .brand-pill-btn .name-full,
-  .brand-pill-btn:hover .name-full {
-    display: none !important;
+
+  .brand-pill-btn.is-expanded .name-short {
+    opacity: 0 !important;
+    transform: translateX(-14px) !important;
+  }
+
+  .brand-pill-btn .name-full {
+    display: inline-flex !important;
+    opacity: 0 !important;
+    transform: translateX(16px) !important;
+    pointer-events: none !important;
+    font-size: 0.76rem !important;
+    gap: 6px !important;
+    letter-spacing: 0.03em !important;
+    transition: opacity 0.4s ease 0.1s, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.06s !important;
+  }
+
+  .brand-pill-btn.is-expanded .name-full {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    pointer-events: auto !important;
+  }
+
+  .brand-pill-btn .name-full-text {
+    font-size: 0.76rem !important;
+    white-space: nowrap !important;
+  }
+
+  .brand-target-icon {
+    width: 15px !important;
+    height: 15px !important;
   }
 
   /* Hide Desktop CTA in top bar on mobile */
@@ -3274,6 +3312,14 @@ a {
 
   .site-header {
     width: calc(100% - 0.75rem) !important;
+  }
+
+  .brand-pill-btn.is-expanded {
+    width: 176px !important;
+  }
+
+  .brand-pill-btn .name-full-text {
+    font-size: 0.72rem !important;
   }
 
   .hero-full-bg-layer {
