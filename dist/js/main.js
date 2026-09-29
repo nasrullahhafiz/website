@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initFooterSocialPopover();
   initFooterBrandSpotlight();
   initCtaCardBorderGlow();
+  initScrollProgressBar();
+  initScrollRevealObserver();
+  initNumberCountAnimation();
 });
 
 /* ==========================================================================
@@ -433,6 +436,8 @@ function renderServices() {
   if (activeServiceFilter && activeServiceFilter !== 'all') {
     filterServices(activeServiceFilter);
   }
+
+  setTimeout(initScrollRevealObserver, 60);
 }
 
 /* ==========================================================================
@@ -593,6 +598,8 @@ function renderPortfolio(category = activePortfolioFilter) {
       </div>
     </div>
   `).join('');
+
+  setTimeout(initScrollRevealObserver, 60);
 }
 
 // Case Study Modal
@@ -874,6 +881,8 @@ function renderProcessAndWhy() {
       </div>
     `).join('');
   }
+
+  setTimeout(initScrollRevealObserver, 60);
 }
 
 /* ==========================================================================
@@ -1149,6 +1158,128 @@ function initCtaCardBorderGlow() {
     targetProx = 0.4;
     if (!rAF) rAF = requestAnimationFrame(tick);
   });
+}
+
+/* ==========================================================================
+   15. TOP READING SCROLL PROGRESS BAR
+   ========================================================================== */
+function initScrollProgressBar() {
+  const progressBar = document.getElementById('scroll-progress');
+  if (!progressBar) return;
+
+  function updateProgress() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = `${Math.min(100, Math.max(0, scrollPercent))}%`;
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+}
+
+/* ==========================================================================
+   16. DYNAMIC SCROLL REVEAL & CASCADE CONTROLLER
+   ========================================================================== */
+let revealObserverInstance = null;
+
+function initScrollRevealObserver() {
+  const targets = document.querySelectorAll(
+    '.section-header-delight, .service-card, .process-card, .why-card, .delight-project-card, .faq-item, .delight-stat-card, .estimate-calculator-box, .cmyk-interactive-box, .cta-banner-card'
+  );
+
+  if (targets.length === 0) return;
+
+  // Stagger assign within grids
+  const gridSelectors = ['.services-grid', '.process-grid', '.why-grid', '.portfolio-grid', '.hero-stats-panel'];
+  gridSelectors.forEach(gridSel => {
+    const grids = document.querySelectorAll(gridSel);
+    grids.forEach(grid => {
+      const items = Array.from(grid.children);
+      items.forEach((item, idx) => {
+        const staggerClass = `stagger-${Math.min(6, (idx % 6) + 1)}`;
+        item.classList.add('reveal-item', staggerClass);
+      });
+    });
+  });
+
+  // Assign reveal-item to any remaining targets
+  targets.forEach(el => {
+    if (!el.classList.contains('reveal-item')) {
+      el.classList.add('reveal-item');
+    }
+  });
+
+  if (!revealObserverInstance) {
+    revealObserverInstance = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.08
+    });
+  }
+
+  targets.forEach(el => {
+    if (!el.classList.contains('is-revealed')) {
+      revealObserverInstance.observe(el);
+    }
+  });
+}
+
+/* ==========================================================================
+   17. INTERACTIVE NUMBER COUNTER ANIMATION (Hero Stats / Metrics)
+   ========================================================================== */
+function initNumberCountAnimation() {
+  const statNumbers = document.querySelectorAll('.stat-card-number');
+  if (statNumbers.length === 0) return;
+
+  const countObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  statNumbers.forEach(numEl => {
+    countObserver.observe(numEl);
+  });
+}
+
+function animateCounter(el) {
+  const originalText = el.innerText.trim();
+  // Extract number and suffix (e.g. 300+ -> 300 and "+", 100% -> 100 and "%")
+  const match = originalText.match(/^([0-9]+)(.*)$/);
+  if (!match) return;
+
+  const target = parseInt(match[1], 10);
+  const suffix = match[2] || '';
+  const duration = 1800; // ms
+  const startTime = performance.now();
+
+  function updateNumber(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(1, elapsed / duration);
+    // Ease out cubic: 1 - pow(1 - progress, 3)
+    const easeOut = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(easeOut * target);
+
+    el.innerText = `${current}${suffix}`;
+
+    if (progress < 1) {
+      requestAnimationFrame(updateNumber);
+    } else {
+      el.innerText = originalText;
+    }
+  }
+
+  requestAnimationFrame(updateNumber);
 }
 
 
