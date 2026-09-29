@@ -29,11 +29,11 @@ function initTheme() {
   document.documentElement.setAttribute('data-theme', 'dark');
   localStorage.setItem('delight-theme', 'dark');
 
-  // Fixed signature accent: Solar Gold to Sunset Orange (#f48000 / #f8c118)
-  document.documentElement.style.setProperty('--accent-primary', '#f48000');
-  document.documentElement.style.setProperty('--accent-primary-hover', '#d95a00');
-  document.documentElement.style.setProperty('--accent-glow', 'rgba(244, 128, 0, 0.40)');
-  document.documentElement.style.setProperty('--border-accent', 'rgba(244, 128, 0, 0.45)');
+  // Fixed signature accent: Modern Sky Blue #34A7E9
+  document.documentElement.style.setProperty('--accent-primary', '#34a7e9');
+  document.documentElement.style.setProperty('--accent-primary-hover', '#1d87c7');
+  document.documentElement.style.setProperty('--accent-glow', 'rgba(52, 167, 233, 0.40)');
+  document.documentElement.style.setProperty('--border-accent', 'rgba(52, 167, 233, 0.45)');
 }
 
 /* ==========================================================================

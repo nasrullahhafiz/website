@@ -4,18 +4,19 @@
    ========================================================================== */
 
 :root {
-  /* Dynamic Accent Color (Sunset Solar Amber & Warm Orange Gradient) */
-  --accent-primary: #f48000;
-  --accent-primary-hover: #d95a00;
-  --accent-gold: #f8c118;
-  --accent-orange-deep: #c64100;
-  --accent-glow: rgba(244, 128, 0, 0.40);
-  --accent-gradient: linear-gradient(180deg, #f8c118 0%, #f7a90f 25%, #f48000 60%, #c64100 100%);
-  --accent-gradient-h: linear-gradient(135deg, #f8c118 0%, #f48000 55%, #c64100 100%);
+  /* Dynamic Accent Color (Modern Sky Blue #34A7E9) */
+  --accent-primary: #34a7e9;
+  --accent-primary-hover: #1d87c7;
+  --accent-sky-light: #60bbf0;
+  --accent-sky-deep: #1573ab;
+  --accent-glow: rgba(52, 167, 233, 0.40);
+  --accent-gradient: linear-gradient(180deg, #60bbf0 0%, #34a7e9 60%, #1d87c7 100%);
+  --accent-gradient-h: linear-gradient(135deg, #5bbbf2 0%, #34a7e9 55%, #1d87c7 100%);
 
   /* Alternative Presets */
   --accent-violet: #8b5cf6;
   --accent-red: #ff3838;
+  --accent-gold: #f59e0b;
   --accent-cyan: #00f5ff;
   --accent-emerald: #10b981;
 
@@ -34,7 +35,7 @@
 
   --border-light: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 255, 255, 0.22);
-  --border-accent: rgba(244, 128, 0, 0.45);
+  --border-accent: rgba(52, 167, 233, 0.45);
 
   /* Fonts */
   --font-primary: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -274,7 +275,7 @@ a {
 .brand-target-point {
   width: 4px;
   height: 4px;
-  background-color: var(--accent-primary, #f48000);
+  background-color: var(--accent-primary, #34a7e9);
   border-radius: 50%;
 }
 
@@ -824,7 +825,7 @@ a {
 }
 
 .btn-pill-action:hover {
-  background: linear-gradient(135deg, #f7a90f 0%, #d95a00 60%, #b23800 100%);
+  background: linear-gradient(135deg, #48b1ed 0%, #208ecf 60%, #1573ab 100%);
   transform: translateX(-4px) scale(1.03);
   box-shadow: 0 12px 32px var(--accent-glow);
 }
@@ -974,7 +975,7 @@ a {
 .about-pillar-box:hover .pillar-icon-box {
   transform: scale(1.1);
   border-color: var(--accent-primary);
-  background: rgba(244, 128, 0, 0.15);
+  background: rgba(52, 167, 233, 0.15);
 }
 
 .pillar-content {
@@ -1061,12 +1062,12 @@ a {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--accent-primary, #f48000);
+  background: var(--accent-primary, #34a7e9);
 }
 
 .service-tab-btn.active .tab-indicator-dot {
-  background: var(--accent-primary, #f48000);
-  box-shadow: 0 0 8px var(--accent-primary, #f48000);
+  background: var(--accent-primary, #34a7e9);
+  box-shadow: 0 0 8px var(--accent-primary, #34a7e9);
 }
 
 .services-grid {
@@ -1096,7 +1097,7 @@ a {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, rgba(248, 193, 24, 0.7), transparent);
+  background: linear-gradient(90deg, transparent, rgba(52, 167, 233, 0.75), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1113,8 +1114,8 @@ a {
 }
 
 .service-card.is-expanded {
-  border-color: rgba(244, 128, 0, 0.45);
-  box-shadow: 0 12px 32px rgba(244, 128, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.5);
+  border-color: rgba(52, 167, 233, 0.45);
+  box-shadow: 0 12px 32px rgba(52, 167, 233, 0.15), 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 .service-card-header {
@@ -1145,9 +1146,9 @@ a {
 .service-badge-pill {
   font-size: 0.75rem;
   font-family: var(--font-mono);
-  color: #f8c118;
-  background: rgba(244, 128, 0, 0.12);
-  border: 1px solid rgba(244, 128, 0, 0.3);
+  color: #60bbf0;
+  background: rgba(52, 167, 233, 0.12);
+  border: 1px solid rgba(52, 167, 233, 0.3);
   padding: 0.25rem 0.65rem;
   border-radius: 9999px;
   text-transform: uppercase;
@@ -1165,7 +1166,7 @@ a {
 
 .service-card:hover .service-number,
 .service-card.is-expanded .service-number {
-  color: var(--accent-primary, #f48000);
+  color: var(--accent-primary, #34a7e9);
 }
 
 .service-title {
@@ -1218,7 +1219,7 @@ a {
 }
 
 .deliverables-icon {
-  color: var(--accent-primary, #f48000);
+  color: var(--accent-primary, #34a7e9);
 }
 
 .service-bullets-list {
@@ -1256,8 +1257,8 @@ a {
 }
 
 .service-bullet-item:hover .bullet-dot {
-  background: var(--accent-primary, #f48000);
-  box-shadow: 0 0 8px var(--accent-primary, #f48000);
+  background: var(--accent-primary, #34a7e9);
+  box-shadow: 0 0 8px var(--accent-primary, #34a7e9);
 }
 
 .service-action-footer {
@@ -1282,8 +1283,8 @@ a {
 }
 
 .service-inquire-btn:hover {
-  background: var(--accent-gradient-h, var(--accent-primary, #f48000));
-  border-color: var(--accent-primary, #f48000);
+  background: var(--accent-gradient-h, var(--accent-primary, #34a7e9));
+  border-color: var(--accent-primary, #34a7e9);
   color: #ffffff;
   box-shadow: 0 6px 18px var(--accent-glow);
 }
@@ -1397,7 +1398,7 @@ a {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  border: 2px dashed var(--accent-primary, #f48000);
+  border: 2px dashed var(--accent-primary, #34a7e9);
   margin: 14px;
   display: none;
 }
@@ -1960,9 +1961,9 @@ a {
   padding: 1.5px;
   background: radial-gradient(
     calc(240px + var(--edge-proximity, 0.5) * 160px) circle at var(--card-mouse-x, 50%) var(--card-mouse-y, 50%),
-    rgba(248, 193, 24, calc(0.65 + var(--edge-proximity, 0.5) * 0.35)) 0%,
-    rgba(244, 128, 0, 0.45) 28%,
-    rgba(198, 65, 0, 0.15) 58%,
+    rgba(96, 187, 240, calc(0.65 + var(--edge-proximity, 0.5) * 0.35)) 0%,
+    rgba(52, 167, 233, 0.45) 28%,
+    rgba(21, 115, 171, 0.15) 58%,
     transparent 80%
   );
   -webkit-mask: 
@@ -1984,13 +1985,13 @@ a {
 
 @keyframes ctaStrokeBreathe {
   0% {
-    filter: drop-shadow(0 0 3px rgba(248, 193, 24, 0.45));
+    filter: drop-shadow(0 0 3px rgba(96, 187, 240, 0.45));
   }
   50% {
-    filter: drop-shadow(0 0 8px rgba(244, 128, 0, 0.8));
+    filter: drop-shadow(0 0 8px rgba(52, 167, 233, 0.8));
   }
   100% {
-    filter: drop-shadow(0 0 3px rgba(248, 193, 24, 0.45));
+    filter: drop-shadow(0 0 3px rgba(96, 187, 240, 0.45));
   }
 }
 
@@ -2002,8 +2003,8 @@ a {
   border-radius: 38px;
   background: radial-gradient(
     320px circle at var(--card-mouse-x, 50%) var(--card-mouse-y, 50%),
-    rgba(244, 128, 0, 0.22) 0%,
-    rgba(198, 65, 0, 0.08) 48%,
+    rgba(52, 167, 233, 0.22) 0%,
+    rgba(21, 115, 171, 0.08) 48%,
     transparent 75%
   );
   filter: blur(28px);
@@ -2042,7 +2043,7 @@ a {
     transform: translateY(0);
   }
   50% {
-    box-shadow: 0 16px 42px rgba(244, 128, 0, 0.65);
+    box-shadow: 0 16px 42px rgba(52, 167, 233, 0.65);
     transform: translateY(-2px);
   }
   100% {
