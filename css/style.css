@@ -201,8 +201,7 @@ a {
               transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.brand-pill-btn:hover,
-.brand-pill-btn.is-expanded {
+.brand-pill-btn:hover {
   width: 202px; /* Smoothly expands to comfortably fit "NASRULLAH HAFIZ" + icon */
   box-shadow: 0 6px 24px rgba(255, 255, 255, 0.32);
 }
@@ -218,8 +217,7 @@ a {
   pointer-events: none;
 }
 
-.brand-pill-btn:hover .name-short,
-.brand-pill-btn.is-expanded .name-short {
+.brand-pill-btn:hover .name-short {
   opacity: 0;
   transform: translateX(-16px);
 }
@@ -240,8 +238,7 @@ a {
   transition: opacity 0.4s ease 0.12s, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.08s;
 }
 
-.brand-pill-btn:hover .name-full,
-.brand-pill-btn.is-expanded .name-full {
+.brand-pill-btn:hover .name-full {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;

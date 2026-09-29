@@ -237,7 +237,7 @@ function initNavigation() {
 }
 
 /* ==========================================================================
-   5.1 BRAND LOGO CYCLE CONTROLLER (Periodically Reveals Full Name on Mobile)
+   5.1 BRAND LOGO CYCLE CONTROLLER (Periodically Reveals Full Name on Mobile Only)
    ========================================================================== */
 function initBrandLogoCycle() {
   const brandPill = document.getElementById('brand-pill');
@@ -247,20 +247,29 @@ function initBrandLogoCycle() {
   let manualResetTimer = null;
 
   function expandBrand() {
-    if (isManualTap) return;
+    // Strictly mobile only (<= 768px); Desktop relies purely on :hover
+    if (window.innerWidth > 768 || isManualTap) return;
     brandPill.classList.add('is-expanded');
     setTimeout(() => {
       if (!isManualTap) {
         brandPill.classList.remove('is-expanded');
       }
-    }, 3200); // Displays "NASRULLAH HAFIZ" for 3.2s
+    }, 3200); // Displays "NASRULLAH HAFIZ" for 3.2s on mobile
   }
 
-  // Initial expansion after 2 seconds on page load
-  setTimeout(expandBrand, 2000);
+  // Initial expansion after 2.5 seconds only on mobile
+  setTimeout(() => {
+    if (window.innerWidth <= 768) {
+      expandBrand();
+    }
+  }, 2500);
 
-  // Periodic subtle expansion every 8.5 seconds
-  setInterval(expandBrand, 8500);
+  // Periodic subtle expansion every 8.5 seconds strictly on mobile
+  setInterval(() => {
+    if (window.innerWidth <= 768) {
+      expandBrand();
+    }
+  }, 8500);
 
   // Mobile Tap / Touch support
   brandPill.addEventListener('click', (e) => {
@@ -277,6 +286,15 @@ function initBrandLogoCycle() {
       } else {
         isManualTap = false;
       }
+    }
+  });
+
+  // Ensure desktop always remains collapsed unless hovered with mouse
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      brandPill.classList.remove('is-expanded');
+      isManualTap = false;
+      clearTimeout(manualResetTimer);
     }
   });
 }
