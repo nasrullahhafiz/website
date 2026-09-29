@@ -17,8 +17,8 @@ const PORTFOLIO_DATA = {
     bio_bn: "আমি নাসরুল্লাহ হাফিজ, একজন প্রফেশনাল গ্রাফিক ডিজাইনার, প্রিন্টিং এক্সপার্ট ও টাইপোগ্রাফি স্পেশালিস্ট। সুইস টাইপোগ্রাফিক নিয়মানুবর্তিতা, নিখুঁত CMYK প্রি-প্রেস ক্যালিব্রেশন এবং লাক্সারি প্যাকেজিং ইঞ্জিনিয়ারিংয়ের সমন্বয়ে তৈরি করি এমন ব্র্যান্ড আইডেন্টিটি যা স্ক্রিন ও প্রিন্ট উভয় মাধ্যমেই আভিজাত্য প্রকাশ করে।",
     location: "Dhaka, Bangladesh (Global Remote & Press Ready)",
     location_bn: "ঢাকা, বাংলাদেশ (গ্লোবাল রিমোট ও প্রেস-রেডি)",
-    email: "nasrullah.hafiz.design@gmail.com",
-    whatsapp: "+8801700000000",
+    email: "nasrullahhafiz.bd@gmail.com",
+    whatsapp: "+8801710899533",
     rating: "5.0/5",
     totalReviews: 270,
     stats: [

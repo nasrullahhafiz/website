@@ -380,7 +380,7 @@ function renderServices() {
           </ul>
 
           <div class="service-action-footer">
-            <a href="#footer" class="service-inquire-btn">
+            <a href="https://wa.me/8801710899533?text=${encodeURIComponent(isBn ? `হ্যালো নাসরুল্লাহ, আমি আপনার "${s.title_bn || s.title}" সার্ভিস নিয়ে কথা বলতে আগ্রহী।` : `Hello Nasrullah, I would like to discuss your "${s.title}" service.`)}" target="_blank" rel="noopener noreferrer" class="service-inquire-btn">
               <span>${isBn ? 'এই সার্ভিসের কথা বলুন' : 'Inquire This Service'}</span>
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -838,7 +838,7 @@ function initEstimatorCalculator() {
         showToast(isBn ? '🚀 রিকোয়েস্ট পাঠানো হয়েছে! আগামী ২৪ ঘণ্টার মধ্যে প্রেস স্পেসিফিকেশন জানানো হবে।' : '🚀 Print Inquiry Submitted! We will respond within 24 hours with exact press specs.');
 
         // WhatsApp direct link
-        const whatsappUrl = `https://wa.me/8801700000000?text=${encodeURIComponent(quoteSummary)}`;
+        const whatsappUrl = `https://wa.me/8801710899533?text=${encodeURIComponent(quoteSummary)}`;
         const whatsappAction = document.getElementById('whatsapp-direct-link');
         if (whatsappAction) {
           whatsappAction.href = whatsappUrl;
