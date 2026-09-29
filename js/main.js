@@ -29,11 +29,11 @@ function initTheme() {
   document.documentElement.setAttribute('data-theme', 'dark');
   localStorage.setItem('delight-theme', 'dark');
 
-  // Fixed signature accent: Delight Coral Red
-  document.documentElement.style.setProperty('--accent-primary', '#ff3838');
-  document.documentElement.style.setProperty('--accent-primary-hover', '#e62828');
-  document.documentElement.style.setProperty('--accent-glow', 'rgba(255, 56, 56, 0.35)');
-  document.documentElement.style.setProperty('--border-accent', 'rgba(255, 56, 56, 0.4)');
+  // Fixed signature accent: Royal Purple / Electric Violet #8b5cf6
+  document.documentElement.style.setProperty('--accent-primary', '#8b5cf6');
+  document.documentElement.style.setProperty('--accent-primary-hover', '#7c3aed');
+  document.documentElement.style.setProperty('--accent-glow', 'rgba(139, 92, 246, 0.35)');
+  document.documentElement.style.setProperty('--border-accent', 'rgba(139, 92, 246, 0.4)');
 }
 
 /* ==========================================================================
@@ -923,7 +923,7 @@ function showToast(msg) {
   container.innerHTML = ''; // Clear previous toasts to avoid stacking
 
   const toast = document.createElement('div');
-  toast.style.cssText = 'background:#18181c;border:1px solid #ff3838;color:#fff;padding:0.75rem 1.25rem;border-radius:92px;font-size:0.875rem;box-shadow:0 10px 30px rgba(0,0,0,0.6);animation:fadeIn 0.3s ease;pointer-events:auto;font-family:var(--font-primary);';
+  toast.style.cssText = 'background:#18181c;border:1px solid var(--accent-primary, #8b5cf6);color:#fff;padding:0.75rem 1.25rem;border-radius:92px;font-size:0.875rem;box-shadow:0 10px 30px rgba(0,0,0,0.6);animation:fadeIn 0.3s ease;pointer-events:auto;font-family:var(--font-primary);';
   toast.innerText = msg;
 
   container.appendChild(toast);
