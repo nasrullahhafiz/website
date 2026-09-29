@@ -4,15 +4,18 @@
    ========================================================================== */
 
 :root {
-  /* Dynamic Accent Color (Default: Royal Purple / Electric Violet #8b5cf6) */
-  --accent-primary: #8b5cf6;
-  --accent-primary-hover: #7c3aed;
-  --accent-glow: rgba(139, 92, 246, 0.35);
+  /* Dynamic Accent Color (Sunset Solar Amber & Warm Orange Gradient) */
+  --accent-primary: #f48000;
+  --accent-primary-hover: #d95a00;
+  --accent-gold: #f8c118;
+  --accent-orange-deep: #c64100;
+  --accent-glow: rgba(244, 128, 0, 0.40);
+  --accent-gradient: linear-gradient(180deg, #f8c118 0%, #f7a90f 25%, #f48000 60%, #c64100 100%);
+  --accent-gradient-h: linear-gradient(135deg, #f8c118 0%, #f48000 55%, #c64100 100%);
 
   /* Alternative Presets */
   --accent-violet: #8b5cf6;
   --accent-red: #ff3838;
-  --accent-gold: #f59e0b;
   --accent-cyan: #00f5ff;
   --accent-emerald: #10b981;
 
@@ -31,7 +34,7 @@
 
   --border-light: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 255, 255, 0.22);
-  --border-accent: rgba(139, 92, 246, 0.4);
+  --border-accent: rgba(244, 128, 0, 0.45);
 
   /* Fonts */
   --font-primary: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -271,7 +274,7 @@ a {
 .brand-target-point {
   width: 4px;
   height: 4px;
-  background-color: var(--accent-primary, #8b5cf6);
+  background-color: var(--accent-primary, #f48000);
   border-radius: 50%;
 }
 
@@ -806,7 +809,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background-color: var(--accent-primary);
+  background: var(--accent-gradient-h, var(--accent-primary));
   color: #ffffff;
   padding: 1rem 2.2rem;
   border-radius: var(--radius-pill);
@@ -821,7 +824,7 @@ a {
 }
 
 .btn-pill-action:hover {
-  background-color: var(--accent-primary-hover);
+  background: linear-gradient(135deg, #f7a90f 0%, #d95a00 60%, #b23800 100%);
   transform: translateX(-4px) scale(1.03);
   box-shadow: 0 12px 32px var(--accent-glow);
 }
@@ -971,7 +974,7 @@ a {
 .about-pillar-box:hover .pillar-icon-box {
   transform: scale(1.1);
   border-color: var(--accent-primary);
-  background: rgba(139, 92, 246, 0.12);
+  background: rgba(244, 128, 0, 0.15);
 }
 
 .pillar-content {
@@ -1058,12 +1061,12 @@ a {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--accent-primary, #8b5cf6);
+  background: var(--accent-primary, #f48000);
 }
 
 .service-tab-btn.active .tab-indicator-dot {
-  background: var(--accent-primary, #8b5cf6);
-  box-shadow: 0 0 8px var(--accent-primary, #8b5cf6);
+  background: var(--accent-primary, #f48000);
+  box-shadow: 0 0 8px var(--accent-primary, #f48000);
 }
 
 .services-grid {
@@ -1093,7 +1096,7 @@ a {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.6), transparent);
+  background: linear-gradient(90deg, transparent, rgba(248, 193, 24, 0.7), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1110,8 +1113,8 @@ a {
 }
 
 .service-card.is-expanded {
-  border-color: rgba(139, 92, 246, 0.4);
-  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.1), 0 4px 16px rgba(0, 0, 0, 0.5);
+  border-color: rgba(244, 128, 0, 0.45);
+  box-shadow: 0 12px 32px rgba(244, 128, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 .service-card-header {
@@ -1142,9 +1145,9 @@ a {
 .service-badge-pill {
   font-size: 0.75rem;
   font-family: var(--font-mono);
-  color: #a78bfa;
-  background: rgba(139, 92, 246, 0.1);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  color: #f8c118;
+  background: rgba(244, 128, 0, 0.12);
+  border: 1px solid rgba(244, 128, 0, 0.3);
   padding: 0.25rem 0.65rem;
   border-radius: 9999px;
   text-transform: uppercase;
@@ -1162,7 +1165,7 @@ a {
 
 .service-card:hover .service-number,
 .service-card.is-expanded .service-number {
-  color: var(--accent-primary, #8b5cf6);
+  color: var(--accent-primary, #f48000);
 }
 
 .service-title {
@@ -1215,7 +1218,7 @@ a {
 }
 
 .deliverables-icon {
-  color: var(--accent-primary, #8b5cf6);
+  color: var(--accent-primary, #f48000);
 }
 
 .service-bullets-list {
@@ -1253,8 +1256,8 @@ a {
 }
 
 .service-bullet-item:hover .bullet-dot {
-  background: var(--accent-primary, #8b5cf6);
-  box-shadow: 0 0 8px var(--accent-primary, #8b5cf6);
+  background: var(--accent-primary, #f48000);
+  box-shadow: 0 0 8px var(--accent-primary, #f48000);
 }
 
 .service-action-footer {
@@ -1279,10 +1282,10 @@ a {
 }
 
 .service-inquire-btn:hover {
-  background: var(--accent-primary, #8b5cf6);
-  border-color: var(--accent-primary, #8b5cf6);
+  background: var(--accent-gradient-h, var(--accent-primary, #f48000));
+  border-color: var(--accent-primary, #f48000);
   color: #ffffff;
-  box-shadow: 0 6px 18px var(--accent-glow, rgba(139, 92, 246, 0.35));
+  box-shadow: 0 6px 18px var(--accent-glow);
 }
 
 /* Card Bottom Controls */
@@ -1394,7 +1397,7 @@ a {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  border: 2px dashed var(--accent-primary, #8b5cf6);
+  border: 2px dashed var(--accent-primary, #f48000);
   margin: 14px;
   display: none;
 }
@@ -1957,9 +1960,9 @@ a {
   padding: 1.5px;
   background: radial-gradient(
     calc(240px + var(--edge-proximity, 0.5) * 160px) circle at var(--card-mouse-x, 50%) var(--card-mouse-y, 50%),
-    rgba(139, 92, 246, calc(0.55 + var(--edge-proximity, 0.5) * 0.4)) 0%,
-    rgba(167, 139, 250, 0.45) 28%,
-    rgba(124, 58, 237, 0.15) 58%,
+    rgba(248, 193, 24, calc(0.65 + var(--edge-proximity, 0.5) * 0.35)) 0%,
+    rgba(244, 128, 0, 0.45) 28%,
+    rgba(198, 65, 0, 0.15) 58%,
     transparent 80%
   );
   -webkit-mask: 
@@ -1981,13 +1984,13 @@ a {
 
 @keyframes ctaStrokeBreathe {
   0% {
-    filter: drop-shadow(0 0 3px rgba(139, 92, 246, 0.4));
+    filter: drop-shadow(0 0 3px rgba(248, 193, 24, 0.45));
   }
   50% {
-    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.75));
+    filter: drop-shadow(0 0 8px rgba(244, 128, 0, 0.8));
   }
   100% {
-    filter: drop-shadow(0 0 3px rgba(139, 92, 246, 0.4));
+    filter: drop-shadow(0 0 3px rgba(248, 193, 24, 0.45));
   }
 }
 
@@ -1999,8 +2002,8 @@ a {
   border-radius: 38px;
   background: radial-gradient(
     320px circle at var(--card-mouse-x, 50%) var(--card-mouse-y, 50%),
-    rgba(139, 92, 246, 0.18) 0%,
-    rgba(124, 58, 237, 0.06) 48%,
+    rgba(244, 128, 0, 0.22) 0%,
+    rgba(198, 65, 0, 0.08) 48%,
     transparent 75%
   );
   filter: blur(28px);
@@ -2016,7 +2019,7 @@ a {
 }
 
 .cta-banner-card .btn-pill-action {
-  box-shadow: 0 10px 28px var(--accent-glow, rgba(139, 92, 246, 0.35));
+  box-shadow: 0 10px 28px var(--accent-glow);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
@@ -2035,15 +2038,15 @@ a {
 
 @keyframes ctaBtnPulse {
   0% {
-    box-shadow: 0 8px 24px var(--accent-glow, rgba(139, 92, 246, 0.35));
+    box-shadow: 0 8px 24px var(--accent-glow);
     transform: translateY(0);
   }
   50% {
-    box-shadow: 0 16px 42px rgba(139, 92, 246, 0.6);
+    box-shadow: 0 16px 42px rgba(244, 128, 0, 0.65);
     transform: translateY(-2px);
   }
   100% {
-    box-shadow: 0 8px 24px var(--accent-glow, rgba(139, 92, 246, 0.35));
+    box-shadow: 0 8px 24px var(--accent-glow);
     transform: translateY(0);
   }
 }
